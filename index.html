@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Shop Ban hang</title>
+	<style>
+		body{
+			margin: 0;
+			padding: 0;
+		}
+		div{
+			float: left;
+			text-align: center;
+			padding: 20px;
+			font: bold;
+		}
+	</style>
+</head>
+<body>
+	<div id="a">
+		<img src="images/headphone3.png">
+		<p>Sản Phẩm 1</p>
+		<p id="giasp1">100000</p>
+		<p><input type="submit" name="" value="Mua Hàng" onclick="muasp1()"></p>
+	</div>
+	<div id="b">
+		<img src="images/headphone4.png">
+		<p>Sản Phẩm 2</p>
+		<p id="giasp2">500000</p>
+		<p><input type="submit" name="" value="Mua Hàng" onclick="muasp2()"></p>
+	</div>
+	<div id="c">
+		<form name="Giỏ hàng">
+			<p>Giỏ hàng</p>
+			<table border="1">
+				<tr class="td">
+					<th class="c1">Tên SP</th>
+					<th class="c2">SL</th>
+					<th class="c3">Giá</th>
+					<th class="c4">Thành Tiền</th>
+					<th class="c5">Thao tác</th>
+				</tr>
+				<tr id="h1" style="display: none">
+					<td class="c1">Sản Phẩm 1</td>
+					<td class="c2">
+						<input type="number" id="sl1" onchange="tangtien1()" min="1" max="4" onkeydown="return false" value="1">
+						<!-- <select id="sl1" onchange="tangtien1()">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+						</select> -->
+					</td>
+					<td class="c3">100000</td>
+					<td class="c4" id="thanhtien1">0</td>
+					<td class="c5">x</td>
+				</tr>
+				<tr id="h2" style="display: none">
+					<td class="c1">Sản phẩm 2</td>
+					<td class="c2">
+						<input type="number" id="sl2" onchange="tangtien2()" min="1" max="4" onkeydown="return false" value="1">
+						<!-- <select id="sl2" onchange="tangtien2()">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+						</select> -->
+					</td>
+					<td class="c3">500000</td>
+					<td class="c4" id="thanhtien2">0</td>
+					<td class="c5">x</td>
+				</tr>
+				<tr class="h3">
+					<td class="c1">Tổng tiền</td>
+					<td class="c2"> </td>
+					<td class="c3"> </td>
+					<td class="c4" id="tongtien">0</td>
+					<td class="c5"> </td>
+				</tr>
+			</table>
+		</form>
+	</div>
+<script>
+	var giasp1 = document.getElementById("giasp1");
+	var giasp2 = document.getElementById("giasp2");
+	var sl1 = document.getElementById("sl1");
+	var sl2 = document.getElementById("sl2");
+	var h1 = document.getElementById("h1");
+	var h2 = document.getElementById("h2");
+	var thanhtien1 = document.getElementById("thanhtien1");
+	var thanhtien2 = document.getElementById("thanhtien2");
+	var tongtien = document.getElementById("tongtien");
+
+	var tinhtongtien = function(){
+		tongtien.innerText = parseInt(thanhtien1.innerText)+parseInt(thanhtien2.innerText);
+	}
+	var tangtien1 = function(){
+		thanhtien1.innerText = parseInt(sl1.value)*parseInt(giasp1.innerText);
+		tinhtongtien();
+	}
+
+	var tangtien2 = function(){
+		thanhtien2.innerText = parseInt(sl2.value)*parseInt(giasp2.innerText);
+		tinhtongtien();
+	}
+
+	var muasp1 = function(){
+		if(h1.style.display=="none"){
+			h1.style.display="";
+			tangtien1();
+		} else if(parseInt(sl1.value)<4) {
+			sl1.value=parseInt(sl1.value)+1;
+			tangtien1();
+		}
+	}
+
+	var muasp2 = function(){
+		if(h2.style.display=="none"){
+			h2.style.display="";
+			tangtien2();
+		} else if(parseInt(sl2.value)<4) {
+			sl2.value=parseInt(sl2.value)+1;
+			tangtien2();
+		}
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Đề Tài</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+	<nav class="navbar navbar-expand-sm nav-dark bg-dark fixed-top">
+		<span class="navbar-brand col-md-2 text-center"><img src="http://alumni-old.tdtu.edu.vn/Content/images/tdt_logo_white.png" class="w-75" alt=""></span>
+		<h1 class="mr-auto text-light" style="font-size: 25px">Hệ thống đăng ký đồ án - Đại học Tôn Đức Thắng</h1>
+		<ul class="nav ml-auto">
+			<li class="nav-item"><button class="btn btn-primary rounded-0">Đăng nhập</button></li>
+			<li class="nav-item"><button class="btn btn-default rounded-0">Đăng ký</button></li>
+		</ul>
+	</nav>
+	<div class="container-fluid">
+		<div class="row">
+			<ul class="nav flex-column col-md-2 bg-light pr-0 shadow" id="sidebar">
+				<li class="nav-item py-2">
+					<a href="#" class="nav-link text-dark"><i class="fas fa-flag-checkered"></i><span class="hide-item">Thông báo</span></a>
+				</li>
+				<li class="nav-item py-2">
+					<a href="#" class="nav-link text-dark"><i class="fas fa-book-open"></i><span class="hide-item">Đề tài</span></a>
+				</li>
+				<li class="nav-item py-2">
+					<a href="#" class="nav-link text-dark"><i class="fas fa-clipboard-check"></i><span class="hide-item">Kết quả</span></a>
+				</li>
+				<li class="nav-item py-2">
+					<a href="#" class="nav-link text-dark"><i class="fas fa-question-circle"></i><span class="hide-item">Hỏi đáp</span></a>
+				</li>
+				<li class="nav-item py-2">
+					<a href="#" class="nav-link text-dark"><i class="fas fa-users-cog"></i><span class="hide-item">Quản lý</span></a>
+				</li>
+				<li class="nav-item py-2">
+					<a href="#" class="nav-link text-dark" id="btn-an" onclick="an();"><i class="fas fa-chevron-left"></i></a>
+					<a href="#" class="nav-link text-dark d-none" id="btn-hien" onclick="hien();"><i class="fas fa-chevron-right"></i></a>
+				</li>
+			</ul>
+			<div class="col-md-10" id="content">
+				<!-- breadcrumbs -->
+				<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+		            <h1 class="h2">Đăng ký Đề tài</h1>
+            		<div class="btn-toolbar mb-2 mb-md-0">
+		              	<div class="btn-group mr-2">
+		                	<button class="btn btn-sm btn-outline-secondary">Share</button>
+		                	<button class="btn btn-sm btn-outline-secondary">Export</button>
+		              	</div>
+		              	<button class="btn btn-sm btn-outline-secondary dropdown-toggle">
+		                	<i class="fas fa-user-circle"></i> sinh viên
+		              	</button>
+		            </div>
+		        </div>
+		          <!-- endbreadcrumbs -->
+				<table class="table">
+				  <thead class="thead-light">
+				    <tr>
+				      <th scope="col">#</th>
+				      <th scope="col">Mã đề tài</th>
+				      <th scope="col">Tên đề tài</th>
+				      <th scope="col">Trạng thái</th>
+				      <th scope="col">Thành viên</th>
+				      <th scope="col">Thao tác</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				      <th scope="row">1</th>
+				      <td>DA_1018_001</td>
+				      <td>Tìm hiểu ABC</td>
+				      <td>Có sẵn</td>
+				      <td><button class="btn btn-light">Thêm thành viên</button></td>
+				      <td><button class="btn btn-success">Chọn</button></td>
+				    </tr>
+				    <tr>
+				      <th scope="row">2</th>
+				      <td>DA_1018_002</td>
+				      <td>Tìm hiểu XYZ</td>
+				      <td>Chờ thành viên</td>
+				      <td><button class="btn btn-light">Thêm thành viên</button></td>
+				      <td><button class="btn btn-info">Chọn</button></td>
+				    </tr>
+				  </tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	
+	<script src="js/custom.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery-3.2.1.js"></script>
+</body>
+</html>
