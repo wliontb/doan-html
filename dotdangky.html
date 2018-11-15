@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Đợt đăng ký</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/all.min.css">
 	<link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
@@ -77,14 +77,14 @@
 				    </tr>
 				  </thead>
 				  <tbody>
-				    <tr>
-				      <td>Dot_1018_001</td>
-				      <td>Đợt đăng ký đồ án học kỳ 2 lần 1</td>
-				      <td>tvhanh@it.tdt.edu.vn</td>
-				      <td>30/10/2018</td>
-				      <td>30/11/2018</td>
+				    <tr class="o-data">
+				      <td class="data">Dot_1018_001</td>
+				      <td class="data">Đợt đăng ký đồ án học kỳ 2 lần 1</td>
+				      <td class="data">tvhanh@it.tdt.edu.vn</td>
+				      <td class="data">30/10/2018</td>
+				      <td class="data">30/11/2018</td>
 				      <td>
-				      	<button class="btn btn-warning col-md-2"><i class="fas fa-pen"></i></button>
+				      	<button class="btn btn-warning col-md-2" onclick="edit(0)"><i class="fas fa-pen"></i></button>
 				      	<button class="btn btn-danger col-md-2"><i class="far fa-trash-alt"></i></button>
 				      	<button class="btn btn-success col-md-2 px-0">DSSV</button>
 				      	<button class="btn btn-success col-md-2 px-0">DSGV</button>
@@ -115,5 +115,10 @@
 	<script src="js/custom.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery-3.2.1.js"></script>
+	<script>
+		var edit = function(e){
+			
+		}
+	</script>
 </body>
 </html>

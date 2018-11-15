@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/custom.css">
 	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<script src="https://cdn.ckeditor.com/ckeditor5/11.1.1/classic/ckeditor.js"></script>
 </head>
 <body>
 	<nav class="navbar navbar-expand-sm nav-dark bg-dark fixed-top">
@@ -24,7 +25,7 @@
 		<div class="row">
 			<ul class="nav flex-column col-md-2 bg-light pr-0 shadow" id="sidebar">
 				<li class="nav-item py-2">
-					<a href="#" class="nav-link text-dark"><i class="fas fa-flag-checkered"></i><span class="hide-item">Thông báo</span></a>
+					<a href="./thongbao.html" class="nav-link text-dark"><i class="fas fa-flag-checkered"></i><span class="hide-item">Thông báo</span></a>
 				</li>
 				<li class="nav-item py-2">
 					<a href="#" class="nav-link text-dark"><i class="fas fa-book-open"></i><span class="hide-item">Đề tài</span></a>
@@ -49,7 +50,7 @@
 		            <h2 class="h4">Tạo thông báo mới</h1>
             		<div class="btn-toolbar mb-2 mb-md-0">
 		              	<button class="btn btn-sm btn-outline-secondary dropdown-toggle">
-		                	<i class="fas fa-user-circle"></i> sinh viên
+		                	<i class="fas fa-user-circle"></i> giáo vụ
 		              	</button>
 		            </div>
 		        </div>
@@ -65,7 +66,7 @@
 				  </div>
 				  <div class="form-group">
 				    <label for="noidung">Nội dung</label>
-				    <textarea name="content" id="noidung" cols="30" rows="10" class="form-control"></textarea>
+				    <textarea name="content" id="editor" cols="30" rows="10" class="form-control"></textarea>
 				  </div>
 				  <button type="submit" class="btn btn-primary">Lưu</button>
 				  <button type="submit" class="btn btn-primary">Hủy</button>
@@ -73,7 +74,13 @@
 			</div>
 		</div>
 	</div>
-	
+	<script>
+	    ClassicEditor
+	        .create( document.querySelector( '#editor' ) )
+	        .catch( error => {
+	            console.error( error );
+	        } );
+	</script>
 	<script src="js/custom.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery-3.2.1.js"></script>

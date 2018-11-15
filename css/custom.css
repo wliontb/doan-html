@@ -27,3 +27,15 @@ body {
 .hide-item {
 	padding-left: 5px;
 }
+
+
+
+#body-row {
+    margin-left:0;
+    margin-right:0;
+}
+#sidebar-container {
+    min-height: 100vh;   
+    background-color: #333;
+    padding: 0;
+}
