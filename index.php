@@ -19,7 +19,7 @@ include 'connect.php';
 <!-- endbreadcrumbs -->
 <?php 
 if (mysqli_num_rows($result) == 0) {
-  $none = "Không có thông báo nào";
+  $echo = "Không có thông báo nào";
 } else {
     while($row = mysqli_fetch_assoc($result)) {
         
