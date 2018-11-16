@@ -1,22 +1,12 @@
 <?php 
 if(isset($_POST['ok'])){
-	$servername = "localhost";
-	$username = "root";
-	$password = "";
-	$dbname = "doan";
-
-	// Create connection
-	$conn = mysqli_connect($servername, $username, $password, $dbname);
-	// Check connection
-	if (!$conn) {
-	    die("Connection failed: " . mysqli_connect_error());
-	}
-
+	include 'connect.php';
 	$sql = "INSERT INTO kh18_thongbao (title, writer, intro, full, created_at)
-	VALUES ('".$_POST['title']."', 'UsernameTest', '".$_POST['intro']."', '".$_POST['full']."', '".time()."')";
+	VALUES ('".$_POST['title']."', 'UsernameTest', '".$_POST['intro']."', '".$_POST['full']."', NOW())";
 
 	if (mysqli_query($conn, $sql)) {
-	    $text = "Thêm thông báo thành công";
+	    // $text = "Thêm thông báo thành công";
+	    header('Location: index.php');
 	} else {
 		$text = "Thêm thông báo thất bại";
 	}

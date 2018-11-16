@@ -1,5 +1,8 @@
 <?php
 include 'header.php';
+include 'connect.php';
+  $sql = "SELECT * FROM kh18_thongbao";
+  $result = mysqli_query($conn, $sql);
 ?>
 <!-- breadcrumbs -->
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
@@ -14,26 +17,26 @@ include 'header.php';
     </div>
 </div>
 <!-- endbreadcrumbs -->
+<?php 
+if (mysqli_num_rows($result) == 0) {
+  $none = "Không có thông báo nào";
+} else {
+    while($row = mysqli_fetch_assoc($result)) {
+        
+?>
 <div class="card mb-3">
   <div class="card-body">
-    <h5 class="card-title">Thông báo 1</h5>
-    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt dolorum nam, sit maiores fuga iure voluptates necessitatibus non ipsa dolorem.</p>
+    <h5 class="card-title"><?php echo $row['title'] ?></h5>
+    <p class="card-text text-secondary"><?php echo $row['intro'] ?></p>
     <p class="card-text">
-    	<a href="chitietthongbao.html" class="btn btn-sm btn-primary">Chi tiết</a>
-    	<small class="text-muted text-right float-right"><i class="fas fa-user-edit"></i> Username  <i class="fas fa-clock"></i> Last updated 3 mins ago</small>
-    </p>
-  </div>
-</div>
-<div class="card">
-  <div class="card-body">
-    <h5 class="card-title">Thông báo 2</h5>
-    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis ea commodi quisquam culpa dolores ratione et, itaque inventore aliquam facilis.</p>
-    <p class="card-text">
-    	<a href="chitietthongbao.html" class="btn btn-sm btn-primary">Chi tiết</a>
-    	<small class="text-muted text-right float-right"><i class="fas fa-user-edit"></i> Username  <i class="fas fa-clock"></i> Last updated 3 mins ago</small>
+    	<a href="<?php echo "chitiet.php?id=".$row['id']  ?>" class="btn btn-sm btn-primary">Chi tiết</a>
+    	<small class="text-muted text-right float-right"><i class="fas fa-user-edit"></i> <?php echo $row['writer'] ?>  <i class="fas fa-clock"></i> <?php echo $row['created_at'] ?></small>
     </p>
   </div>
 </div>
 <?php
+    }
+}
+mysqli_close($conn);
 include 'footer.php';
 ?>
