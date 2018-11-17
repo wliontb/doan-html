@@ -56,5 +56,5 @@ if(isset($text)){
   <button type="reset" class="btn btn-primary">Hủy</button>
 </form>
 <?php
-include 'footer.php';
+include "../footer.php";
  ?>
