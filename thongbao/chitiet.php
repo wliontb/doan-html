@@ -1,9 +1,9 @@
 <?php 
-include 'header.php';
+include "../header.php";
 if(empty($_GET['id'])){
 	die('Địa chỉ không đúng');
 } else {
-	include 'connect.php';
+	include "../connect.php";
 	$sql = "SELECT * FROM kh18_thongbao WHERE id=".$_GET['id']."";
 	$result = mysqli_query($conn, $sql);
 
@@ -44,4 +44,4 @@ if(empty($_GET['id'])){
     
   </div>
 </div>
-<?php include 'footer.php'; ?>
+<?php include "../footer.php"; ?>

@@ -1,42 +1,54 @@
-<?php
-include 'header.php';
-include 'connect.php';
-  $sql = "SELECT * FROM kh18_thongbao";
-  $result = mysqli_query($conn, $sql);
-?>
-<!-- breadcrumbs -->
-<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <h1 class="h2">Thông báo</h1>
-	<div class="btn-toolbar mb-2 mb-md-0">
-      	<div class="btn-group mr-2">
-        	<a href="addthongbao.php" class="btn btn-sm btn-success">Thêm thông báo</a>
-      	</div>
-      	<button class="btn btn-sm btn-outline-secondary dropdown-toggle">
-        	<i class="fas fa-user-circle"></i> all
-      	</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Đăng nhập</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <script src="https://cdn.ckeditor.com/ckeditor5/11.1.1/classic/ckeditor.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-sm nav-dark bg-dark fixed-top">
+    <a href="index.php" class="navbar-brand col-md-2 text-center"><img src="http://alumni-old.tdtu.edu.vn/Content/images/tdt_logo_white.png" class="w-75" alt=""></a>
+    <h1 class="mr-auto text-light" style="font-size: 25px;margin-left: 10rem!important;">Hệ thống đăng ký đồ án - Đại học Tôn Đức Thắng</h1>
+    <!-- <ul class="nav ml-auto">
+      <li class="nav-item">
+        <a href="login.php" title="login with Gmail">
+          <span class="btn btn-danger rounded-0"><i class="fab fa-google"></i></span><span class="btn btn-light rounded-0">Gmail</span>
+        </a>
+      </li>
+    </ul> -->
+  </nav>
+  <div class="container-fluid">
+    <div class="row justify-content-center" style="margin-top: 150px">
+      <form action="#" class="col-4">
+        <h1 class="h3 text-center text-secondary">Login with <i class="fab fa-google text-danger"></i>mail</h1>
+        <div class="form-group">
+          <label for="username" class="text-center">Gmail : </label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">@</span>
+            </div>
+            <input type="text" class="form-control" placeholder="email" style=";border-bottom-right-radius: 0;border-bottom-left-radius: 0;" required autofocus>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="username">Password : </label>
+          <div class="input-group">
+            <!-- <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon2"></span>
+            </div> -->
+            <input type="password" class="form-control" placeholder="password" style="border-top-left-radius: 0;border-top-right-radius: 0;" required>
+          </div>
+        </div>
+        <button class="btn btn-md container btn-success">Đăng nhập</button>
+      </form>
     </div>
-</div>
-<!-- endbreadcrumbs -->
-<?php 
-if (mysqli_num_rows($result) == 0) {
-  $echo = "Không có thông báo nào";
-} else {
-    while($row = mysqli_fetch_assoc($result)) {
-        
-?>
-<div class="card mb-3">
-  <div class="card-body">
-    <h5 class="card-title"><?php echo $row['title'] ?></h5>
-    <p class="card-text text-secondary"><?php echo $row['intro'] ?></p>
-    <p class="card-text">
-    	<a href="<?php echo "chitiet.php?id=".$row['id']  ?>" class="btn btn-sm btn-primary">Chi tiết</a>
-    	<small class="text-muted text-right float-right"><i class="fas fa-user-edit"></i> <?php echo $row['writer'] ?>  <i class="fas fa-clock"></i> <?php echo $row['created_at'] ?></small>
-    </p>
   </div>
-</div>
-<?php
-    }
-}
-mysqli_close($conn);
-include 'footer.php';
-?>
+  
+  <script src="js/custom.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery-3.2.1.js"></script>
+</body>
+</html>

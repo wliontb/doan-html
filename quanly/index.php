@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+<?php include "../header.php"; ?>
 <!-- breadcrumbs -->
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
     <h1 class="h2">Trang Quản lý - Giáo vụ</h1>
@@ -19,4 +19,4 @@
   <a href="quanlysinhvien.php" class="list-group-item list-group-item-action"><i class="fas fa-search"></i> Xem thông tin sinh viên theo từng đợt đăng ký</a>
   <a href="quanlygiangvien.php" class="list-group-item list-group-item-action"><i class="fas fa-search"></i> Xem thông tin giảng viên theo từng đợt đăng ký</a>
 </div>
-<?php include 'footer.php'; ?>
+<?php include "../footer.php"; ?>

@@ -1,5 +1,5 @@
 <?php 
-include 'header.php'; ?>
+include "../header.php"; ?>
 <!-- breadcrumbs -->
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
     <h1 class="h4">Kết quả đăng ký của sinh viên :</h1>
@@ -52,4 +52,4 @@ include 'header.php'; ?>
   </tbody>
 </table>
 <?php 
-include 'footer.php'; ?>
+include "../footer.php"; ?>

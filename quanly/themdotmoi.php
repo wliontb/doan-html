@@ -1,5 +1,5 @@
 <?php 
-include 'header.php'; ?>
+include "../header.php"; ?>
 <!-- breadcrumbs -->
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
     <h2 class="h4">Tạo đợt đăng ký mới</h1>
@@ -39,4 +39,4 @@ include 'header.php'; ?>
   <button type="submit" class="btn btn-primary">Hủy</button>
 </form>
 <?php 
-include 'footer.php'; ?>
+include "../footer.php"; ?>

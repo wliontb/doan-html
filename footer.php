@@ -1,3 +1,4 @@
+<?php include '../config/config.php'; ?>		
 		</div>
 	</div>
 	<script>
@@ -7,9 +8,9 @@
             console.error( error );
         } );
 	</script>
-	<script src="js/custom.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery-3.2.1.js"></script>
+	<script src="<?php echo $url ?>js/custom.js"></script>
+	<script src="<?php echo $url ?>js/bootstrap.min.js"></script>
+	<script src="<?php echo $url ?>js/jquery-3.2.1.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script>
 		$(function() {

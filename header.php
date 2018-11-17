@@ -1,11 +1,12 @@
+<?php include '../config/config.php'; ?>	
 <!DOCTYPE html>
 	<html lang="en">
 	<head>
 		<meta charset="UTF-8">
 		<title>Thông báo</title>
-		<link rel="stylesheet" href="css/bootstrap.min.css">
-		<link rel="stylesheet" href="css/all.min.css">
-		<link rel="stylesheet" href="css/custom.css">
+		<link rel="stylesheet" href="<?php echo $url ?>css/bootstrap.min.css">
+		<link rel="stylesheet" href="<?php echo $url ?>css/all.min.css">
+		<link rel="stylesheet" href="<?php echo $url ?>css/custom.css">
 		<script src="https://cdn.ckeditor.com/ckeditor5/11.1.1/classic/ckeditor.js"></script>	
 		<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	</head>

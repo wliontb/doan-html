@@ -1,6 +1,6 @@
 <?php 
 if(isset($_POST['ok'])){
-	include 'connect.php';
+	include "../connect.php";
 	$sql = "INSERT INTO kh18_thongbao (title, writer, intro, full, created_at)
 	VALUES ('".$_POST['title']."', 'UsernameTest', '".$_POST['intro']."', '".$_POST['full']."', NOW())";
 
@@ -15,7 +15,7 @@ if(isset($_POST['ok'])){
 }
 
 
-include 'header.php';
+include "../header.php";
 
 ?>
 <!-- breadcrumbs -->

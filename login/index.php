@@ -1,24 +1,25 @@
+<?php include "../config/config.php" ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>Đăng nhập</title>
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/all.min.css">
-	<link rel="stylesheet" href="css/custom.css">
+	<link rel="stylesheet" href="<?php echo $url ?>css/bootstrap.min.css">
+	<link rel="stylesheet" href="<?php echo $url ?>css/all.min.css">
+	<link rel="stylesheet" href="<?php echo $url ?>css/custom.css">
 	<script src="https://cdn.ckeditor.com/ckeditor5/11.1.1/classic/ckeditor.js"></script>
 </head>
 <body>
 	<nav class="navbar navbar-expand-sm nav-dark bg-dark fixed-top">
 		<a href="index.php" class="navbar-brand col-md-2 text-center"><img src="http://alumni-old.tdtu.edu.vn/Content/images/tdt_logo_white.png" class="w-75" alt=""></a>
-		<h1 class="mr-auto text-light" style="font-size: 25px">Hệ thống đăng ký đồ án - Đại học Tôn Đức Thắng</h1>
-		<ul class="nav ml-auto">
+		<h1 class="mr-auto text-light" style="font-size: 25px;margin-left: 10rem!important;">Hệ thống đăng ký đồ án - Đại học Tôn Đức Thắng</h1>
+		<!-- <ul class="nav ml-auto">
 			<li class="nav-item">
-				<a href="#" title="login with Gmail">
+				<a href="login.php" title="login with Gmail">
 					<span class="btn btn-danger rounded-0"><i class="fab fa-google"></i></span><span class="btn btn-light rounded-0">Gmail</span>
 				</a>
 			</li>
-		</ul>
+		</ul> -->
 	</nav>
 	<div class="container-fluid">
 		<div class="row justify-content-center" style="margin-top: 150px">
@@ -47,8 +48,8 @@
 		</div>
 	</div>
 	
-	<script src="js/custom.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery-3.2.1.js"></script>
+	<script src="<?php echo $url ?>js/custom.js"></script>
+	<script src="<?php echo $url ?>js/bootstrap.min.js"></script>
+	<script src="<?php echo $url ?>js/jquery-3.2.1.js"></script>
 </body>
 </html>
